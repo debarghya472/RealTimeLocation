@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PassengerActivity.class));
             }
         });
-
+        checkPermission();
 
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.M) {
             checkPermission();

@@ -4,6 +4,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -58,6 +59,7 @@ public class DriverActivity extends AppCompatActivity {
                                 public void onResponse(PNPublishResult result, PNStatus status) {
                                     // handle publish result, status always present, result if successful
                                     // status.isError() to see if error happened
+                                    Toast.makeText(getApplicationContext(),"false",Toast.LENGTH_SHORT).show();
                                     if (!status.isError()) {
                                         System.out.println("pub timetoken: " + result.getTimetoken());
                                     }

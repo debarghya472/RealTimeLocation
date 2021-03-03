@@ -113,7 +113,7 @@ public class PassengerActivity extends AppCompatActivity implements OnMapReadyCa
             }
         });
         MainActivity.pubnub.subscribe()
-                .channels(Arrays.asList(Constants.PUBNUB_CHANNEL_NAME)) // subscribe to channels
+                .channels(Arrays.asList("Service 1")) // subscribe to channels
                 .execute();
 
     }
