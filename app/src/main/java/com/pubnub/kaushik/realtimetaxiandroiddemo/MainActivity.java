@@ -19,31 +19,54 @@ import com.pubnub.kaushik.realtimetaxiandroiddemo.util.Constants;
 public class MainActivity extends AppCompatActivity {
 
     public static PubNub pubnub; // Pubnub instance
+    public static String channel = "";
 
-    Button driverButton, passengerButton; // Buttons that redirect user to proper view
+    Button passengerButton,service2,service3,service4,service5,service6,service7; // Buttons that redirect user to proper view
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        driverButton = (Button) findViewById(R.id.driverButton);
+//        driverButton = (Button) findViewById(R.id.driverButton);
         passengerButton = (Button) findViewById(R.id.passengerButton);
+        service2 = findViewById(R.id.service2);
+        service3 = findViewById(R.id.service3);
+        service4 = findViewById(R.id.service4);
+        service5 = findViewById(R.id.service5);
+        service6 = findViewById(R.id.service6);
+        service7 = findViewById(R.id.service7);
+
 
         initPubnub();
 
-        // Send user to Driver Activity or Passenger Activity using intents
-        driverButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DriverActivity.class));
-            }
+        passengerButton.setOnClickListener(view ->{
+            channel = "Service 1";
+            sendToPassenger();
         });
-        passengerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, PassengerActivity.class));
-            }
+        service2.setOnClickListener(view -> {
+            channel = "Service 2";
+            sendToPassenger();
+        });
+        service3.setOnClickListener(view -> {
+            channel = "Service 2";
+            sendToPassenger();
+        });
+        service4.setOnClickListener(view -> {
+            channel = "Service 2";
+            sendToPassenger();
+        });
+        service5.setOnClickListener(view -> {
+            channel = "Service 2";
+            sendToPassenger();
+        });
+        service6.setOnClickListener(view -> {
+            channel = "Service 2";
+            sendToPassenger();
+        });
+        service7.setOnClickListener(view -> {
+            channel = "Service 2";
+            sendToPassenger();
         });
         checkPermission();
 
@@ -51,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
             checkPermission();
         }
 
+    }
+
+    private void sendToPassenger() {
+        startActivity(new Intent(MainActivity.this, PassengerActivity.class));
     }
 
     /*

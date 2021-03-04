@@ -27,6 +27,8 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import static com.pubnub.kaushik.realtimetaxiandroiddemo.MainActivity.channel;
+
 
 public class PassengerActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -113,7 +115,7 @@ public class PassengerActivity extends AppCompatActivity implements OnMapReadyCa
             }
         });
         MainActivity.pubnub.subscribe()
-                .channels(Arrays.asList("Service 1")) // subscribe to channels
+                .channels(Arrays.asList(channel)) // subscribe to channels
                 .execute();
 
     }
