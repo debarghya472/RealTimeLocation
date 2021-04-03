@@ -21,15 +21,15 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDsIfuoVpSIF_Rno1_R0svkLPk3P1res9Q" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.barbera.barberahomesalon.Admin.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DriverActivity" />
-        <activity android:name=".PassengerActivity"></activity>
+        <activity android:name="com.barbera.barberahomesalon.Admin.DriverActivity" />
+        <activity android:name="com.barbera.barberahomesalon.Admin.PassengerActivity"></activity>
     </application>
 
 </manifest>

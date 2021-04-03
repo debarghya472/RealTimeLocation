@@ -1,4 +1,4 @@
-package com.pubnub.kaushik.realtimetaxiandroiddemo;
+package com.barbera.barberahomesalon.Admin;
 
 import android.location.Location;
 import android.os.Bundle;
@@ -14,7 +14,8 @@ import com.google.android.gms.location.LocationServices;
 import com.pubnub.api.callbacks.PNCallback;
 import com.pubnub.api.models.consumer.PNPublishResult;
 import com.pubnub.api.models.consumer.PNStatus;
-import com.pubnub.kaushik.realtimetaxiandroiddemo.util.Constants;
+import com.pubnub.kaushik.realtimetaxiandroiddemo.R;
+import com.barbera.barberahomesalon.Admin.util.Constants;
 
 import java.util.LinkedHashMap;
 

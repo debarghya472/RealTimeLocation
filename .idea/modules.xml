@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RealtimeTaxiAndroidDemo.iml" filepath="$PROJECT_DIR$/RealtimeTaxiAndroidDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RealtimeTaxiAndroidDemo-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RealtimeTaxiAndroidDemo-app.iml" group="RealtimeTaxiAndroidDemo/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android apps-RealtimeTaxiAndroidDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/android apps-RealtimeTaxiAndroidDemo.iml" group="RealtimeTaxiAndroidDemo" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RealtimeTaxiAndroidDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/RealtimeTaxiAndroidDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RealtimeTaxiAndroidDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RealtimeTaxiAndroidDemo.app.iml" />
     </modules>
   </component>
 </project>

@@ -1,4 +1,4 @@
-package com.pubnub.kaushik.realtimetaxiandroiddemo;
+package com.barbera.barberahomesalon.Admin;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.LinearInterpolator;
 
+import com.barbera.barberahomesalon.Admin.util.JsonUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,14 +21,11 @@ import com.pubnub.api.callbacks.SubscribeCallback;
 import com.pubnub.api.models.consumer.PNStatus;
 import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
 import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
-import com.pubnub.kaushik.realtimetaxiandroiddemo.util.Constants;
-import com.pubnub.kaushik.realtimetaxiandroiddemo.util.JsonUtil;
+import com.pubnub.kaushik.realtimetaxiandroiddemo.R;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import static com.pubnub.kaushik.realtimetaxiandroiddemo.MainActivity.channel;
 
 
 public class PassengerActivity extends AppCompatActivity implements OnMapReadyCallback {
@@ -115,7 +113,7 @@ public class PassengerActivity extends AppCompatActivity implements OnMapReadyCa
             }
         });
         MainActivity.pubnub.subscribe()
-                .channels(Arrays.asList(channel)) // subscribe to channels
+                .channels(Arrays.asList(MainActivity.channel)) // subscribe to channels
                 .execute();
 
     }

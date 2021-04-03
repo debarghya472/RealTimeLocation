@@ -1,4 +1,4 @@
-package com.pubnub.kaushik.realtimetaxiandroiddemo.util;
+package com.barbera.barberahomesalon.Admin.util;
 
 public class Constants {
     public final static String PUBNUB_PUBLISH_KEY = "pub-c-f5d42daf-d998-43a8-a9ac-272850696a87";
