@@ -4,8 +4,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.animation.LinearInterpolator;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.barbera.barberahomesalon.Admin.util.JsonUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;

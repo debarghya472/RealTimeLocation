@@ -1,15 +1,17 @@
 package com.barbera.barberahomesalon.Admin;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.barbera.barberahomesalon.Admin.util.Constants;
 import com.pubnub.api.PNConfiguration;
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public static PubNub pubnub; // Pubnub instance
     public static String channel = "";
 
-    Button passengerButton,service2,service3,service4,service5,service6,service7; // Buttons that redirect user to proper view
+    Button passengerButton,service2,service3,service4,service5,service6,service7,open; // Buttons that redirect user to proper view
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +38,13 @@ public class MainActivity extends AppCompatActivity {
         service5 = findViewById(R.id.service5);
         service6 = findViewById(R.id.service6);
         service7 = findViewById(R.id.service7);
+        open = findViewById(R.id.open);
 
 
         initPubnub();
+
+        open.setOnClickListener(view -> startActivity(new Intent(this,FirebaseAdmin.class)));
+
 
         passengerButton.setOnClickListener(view ->{
             channel = "Service 1";
