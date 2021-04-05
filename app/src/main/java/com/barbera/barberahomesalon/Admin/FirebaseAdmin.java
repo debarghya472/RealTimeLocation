@@ -29,6 +29,8 @@ public class FirebaseAdmin extends AppCompatActivity {
         EditText day = findViewById(R.id.day);
         EditText stat = findViewById(R.id.sat);
         EditText region = findViewById(R.id.region);
+        EditText reg = findViewById(R.id.reg);
+        Button swap = findViewById(R.id.swap);
         Button update = findViewById(R.id.update);
 
         Map<String,Object> map = new HashMap<>();
@@ -74,6 +76,51 @@ public class FirebaseAdmin extends AppCompatActivity {
                     });
 
                 }
+            }
+        });
+        swap.setOnClickListener(v -> {
+            String Region = "Region"+reg.getText().toString().trim();
+            for(int i=2;i<=7;i++){
+                int finalI = i;
+                FirebaseFirestore.getInstance().collection("DaytoDayBooking").document("Day" +i)
+                        .collection("Region").document(Region).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        swap(task, finalI,Region);
+                    }
+                });
+            }
+        });
+    }
+
+    private void swap(Task<DocumentSnapshot> task, int index, String region) {
+        Map<String,Object> map = new HashMap<>();
+        map.put("7_m",task.getResult().get("7_m"));
+        map.put("8_m",task.getResult().get("8_m"));
+        map.put("9_m",task.getResult().get("9_m"));
+        map.put("10_m",task.getResult().get("10_m"));
+        map.put("11_m",task.getResult().get("11_m"));
+        map.put("12_m",task.getResult().get("12_m"));
+        map.put("16_m",task.getResult().get("16_m"));
+        map.put("17_m",task.getResult().get("17_m"));
+        map.put("18_m",task.getResult().get("18_m"));
+        map.put("19_m",task.getResult().get("19_m"));
+        map.put("9_f",task.getResult().get("9_f"));
+        map.put("10_f",task.getResult().get("10_f"));
+        map.put("11_f",task.getResult().get("11_f"));
+        map.put("12_f",task.getResult().get("12_f"));
+        map.put("13_f",task.getResult().get("13_f"));
+        map.put("14_f",task.getResult().get("14_f"));
+        map.put("15_f",task.getResult().get("15_f"));
+        map.put("16_f",task.getResult().get("16_f"));
+        map.put("17_f",task.getResult().get("17_f"));
+
+        FirebaseFirestore.getInstance().collection("DaytoDayBooking").document("Day" +(index-1))
+                .collection("Region").document(region).update(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                    Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
             }
         });
     }
