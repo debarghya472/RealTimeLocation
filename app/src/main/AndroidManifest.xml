@@ -15,10 +15,15 @@
 			android:roundIcon="@mipmap/ic_launcher_round"
 			android:supportsRtl="true"
 			android:theme="@style/AppTheme">
+		<activity android:name="com.barbera.barberahomesalon.Admin.UpdateItemActicity"></activity>
 		<activity
 				android:name="com.barbera.barberahomesalon.Admin.FirebaseAdmin"
 				tools:ignore="Instantiatable" />
-		<uses-library android:name="org.apache.http.legacy" android:required="false"/> 
+
+		<uses-library
+				android:name="org.apache.http.legacy"
+				android:required="false" />
+
 		<meta-data
 				android:name="com.google.android.gms.version"
 				android:value="@integer/google_play_services_version" />
@@ -26,7 +31,8 @@
 				android:name="com.google.android.geo.API_KEY"
 				android:value="AIzaSyDsIfuoVpSIF_Rno1_R0svkLPk3P1res9Q" />
 
-		<activity android:name="com.barbera.barberahomesalon.Admin.MainActivity"
+		<activity
+				android:name="com.barbera.barberahomesalon.Admin.MainActivity"
 				tools:ignore="Instantiatable">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -34,9 +40,11 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name="com.barbera.barberahomesalon.Admin.DriverActivity"
+		<activity
+				android:name="com.barbera.barberahomesalon.Admin.DriverActivity"
 				tools:ignore="Instantiatable" />
-		<activity android:name="com.barbera.barberahomesalon.Admin.PassengerActivity"
+		<activity
+				android:name="com.barbera.barberahomesalon.Admin.PassengerActivity"
 				tools:ignore="Instantiatable" />
 	</application>
 

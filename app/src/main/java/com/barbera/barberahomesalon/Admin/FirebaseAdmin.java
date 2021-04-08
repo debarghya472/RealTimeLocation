@@ -1,5 +1,6 @@
 package com.barbera.barberahomesalon.Admin;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
@@ -32,6 +33,11 @@ public class FirebaseAdmin extends AppCompatActivity {
         EditText reg = findViewById(R.id.reg);
         Button swap = findViewById(R.id.swap);
         Button update = findViewById(R.id.update);
+        Button up = findViewById(R.id.update1);
+
+        up.setOnClickListener(v -> {
+            startActivity(new Intent(this,UpdateItemActicity.class));
+        });
 
         Map<String,Object> map = new HashMap<>();
 

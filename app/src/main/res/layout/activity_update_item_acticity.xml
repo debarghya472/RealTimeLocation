@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context="com.barbera.barberahomesalon.Admin.UpdateItemActicity">
+
+	<LinearLayout
+			android:id="@+id/list"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:orientation="vertical"
+			android:visibility="gone"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+		<Button
+				android:id="@+id/service1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 1" />
+
+		<Button
+				android:id="@+id/service2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 2" />
+
+		<Button
+				android:id="@+id/service3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 3" />
+
+		<Button
+				android:id="@+id/service4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 4" />
+
+		<Button
+				android:id="@+id/service5"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 5" />
+
+		<Button
+				android:id="@+id/service6"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 6" />
+
+		<Button
+				android:id="@+id/service7"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 7" />
+
+		<Button
+				android:id="@+id/service8"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 8" />
+
+		<Button
+				android:id="@+id/service9"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="8dp"
+				android:text="Service 9" />
+
+		<Button
+				android:id="@+id/service10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="16dp"
+				android:text="Service 10" />
+	</LinearLayout>
+
+	<LinearLayout
+			android:id="@+id/ll2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:layout_marginTop="16dp"
+			android:orientation="vertical"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent">
+
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Bag"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text1"
+					android:hint="Quantity"
+					android:inputType="number"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Tripod"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text2"
+					android:hint="Quantity"
+					android:inputType="number"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Mirror"
+					android:inputType="number"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text3"
+					android:inputType="number"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text4"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Neck Tape"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit4"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text4"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text5"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Carpet"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit5"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text5"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text6"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Cleansing Cream"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit6"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text6"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text7"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="After lotion"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit7"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text7"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text8"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Shaving Foam"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit8"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text8"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text9"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="T-shirt"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit9"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text9"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text10"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Tissue"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit10"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text10"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text11"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Disposable"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit11"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text11"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text12"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Apron"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit12"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text12"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<TextView
+					android:id="@+id/text13"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:padding="12dp"
+					android:text="Shaving Apron"
+					android:textColor="#000000"
+					android:textSize="20sp" />
+
+			<EditText
+					android:id="@+id/edit13"
+					android:inputType="number"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/text13"
+					android:hint="Quantity"
+					android:padding="12dp" />
+
+		</RelativeLayout>
+		<Button
+			android:id="@+id/done"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="done"/>
+
+
+	</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
