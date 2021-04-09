@@ -1,5 +1,6 @@
 package com.barbera.barberahomesalon.Admin;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,12 +8,15 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.pubnub.kaushik.realtimetaxiandroiddemo.R;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -40,6 +44,7 @@ public class UpdateItemActicity extends AppCompatActivity {
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,11 +103,14 @@ public class UpdateItemActicity extends AppCompatActivity {
         s10.setOnClickListener(v -> selectItems("Service 10"));
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void selectItems(String s) {
         String selectedUid = hashMap.get(s);
         ll.setVisibility(View.GONE);
         ll2.setVisibility(View.VISIBLE);
         //Toast.makeText(getApplicationContext(),selectedUid,Toast.LENGTH_SHORT).show();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
 
         done.setOnClickListener(v -> {Map<String,Object> map = new HashMap<>();
             map.put("bag",edit1.getText().toString());
@@ -118,6 +126,7 @@ public class UpdateItemActicity extends AppCompatActivity {
             map.put("Disposable",edit11.getText().toString());
             map.put("Apron",edit12.getText().toString());
             map.put("shaving apron",edit13.getText().toString());
+            map.put("date",dtf.format(now));
 //        map.put("date",)
 
             FirebaseFirestore.getInstance().collection("Service").document(selectedUid).collection("Item")
