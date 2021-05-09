@@ -15,10 +15,13 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.pubnub.kaushik.realtimetaxiandroiddemo.R;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class FirebaseAdmin extends AppCompatActivity {
 
@@ -34,12 +37,20 @@ public class FirebaseAdmin extends AppCompatActivity {
         Button swap = findViewById(R.id.swap);
         Button update = findViewById(R.id.update);
         Button up = findViewById(R.id.update1);
-
+        EditText randomid  = findViewById(R.id.randomid);
+        EditText customeruid = findViewById(R.id.customerUid);
+        EditText barberuid = findViewById(R.id.barberUID);
+        Button assign = findViewById(R.id.assign);
         up.setOnClickListener(v -> {
             startActivity(new Intent(this,UpdateItemActicity.class));
         });
 
         Map<String,Object> map = new HashMap<>();
+
+        assign.setOnClickListener(v->{
+            if(randomid.getText().toString()!=null || barberuid.getText().toString()!=null || customeruid.getText().toString()!=null)
+                assignbarber(randomid.getText().toString(), barberuid.getText().toString(), customeruid.getText().toString());
+        });
 
 
         update.setOnClickListener(view -> {
@@ -98,6 +109,28 @@ public class FirebaseAdmin extends AppCompatActivity {
             }
         });
     }
+
+    private void assignbarber(String random, String barber,String customer) {
+        FirebaseFirestore.getInstance().collection("Users").document(customer).collection("Bookings").get()
+                .addOnCompleteListener(task -> {
+                    if(task.isSuccessful()){
+                        for (QueryDocumentSnapshot documentSnapshot: Objects.requireNonNull(task.getResult())){
+                            if(documentSnapshot.get("randomId").toString().equals(random)){
+                                Map<String,Object> map=new HashMap<>();
+                                map.put("assignedTo",barber);
+                                FirebaseFirestore.getInstance().collection("Users").document(customer)
+                                        .collection("Bookings").document(documentSnapshot.getId()).update(map)
+                                        .addOnCompleteListener(task1 -> {
+                                            Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_SHORT).show();
+                                        });
+
+                                break;
+                            }
+                        }
+                    }
+                });
+    }
+
 
     private void swap(Task<DocumentSnapshot> task, int index, String region) {
         Map<String,Object> map = new HashMap<>();
