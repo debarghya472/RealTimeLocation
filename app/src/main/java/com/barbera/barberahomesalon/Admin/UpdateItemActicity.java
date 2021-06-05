@@ -128,9 +128,9 @@ public class UpdateItemActicity extends AppCompatActivity {
             map.put("shaving apron",edit13.getText().toString());
             map.put("date",dtf.format(now));
 //        map.put("date",)
-
+        int random =(int)Math.floor(Math.random()*(100));
             FirebaseFirestore.getInstance().collection("Service").document(selectedUid).collection("Item")
-                    .document("list").set(map).addOnCompleteListener(task -> {
+                    .document("list"+random).set(map).addOnCompleteListener(task -> {
                 if(task.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
                     finish();

@@ -108,6 +108,23 @@ public class FirebaseAdmin extends AppCompatActivity {
                 });
             }
         });
+
+//        call();
+    }
+
+    private void call() {
+        Map<String,Object> map = new HashMap<>();
+        map.put("discount",0);
+        FirebaseFirestore.getInstance().collection("Women's Salon").get()
+                .addOnCompleteListener(task -> {
+                    for (DocumentSnapshot documentSnapshot : task.getResult()){
+                        FirebaseFirestore.getInstance().collection("Women's Salon").
+                                document(documentSnapshot.getId()).update(map)
+                                .addOnCompleteListener(task1 ->{});
+                    }
+                    Toast.makeText(getApplicationContext(),"Done",Toast.LENGTH_SHORT).show();
+                });
+
     }
 
     private void assignbarber(String random, String barber,String customer) {
